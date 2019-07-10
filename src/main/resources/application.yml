@@ -3,9 +3,16 @@ server:
 
 spring:
   profiles:
+    #    active: git
+
+    # change config can not effect immediately， need to reboot server
     active: native
+
   cloud:
     config:
       server:
         native:
           search-locations: classpath:/shared
+        git:
+          skip-ssl-validation: true
+          uri: https://github.com/jianane/config_server
