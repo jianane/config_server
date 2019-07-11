@@ -15,6 +15,6 @@ spring:
           search-locations: classpath:shared, classpath:share
         git:
           skip-ssl-validation: true
-          uri: file://E:/workspace_sc/config_server #从本地取 添加到git的会强制回退到和git服务器相同的版本，没添加的不会，并且随意修改也可以生效（比native好用）
-#          uri: https://github.com/jianane/config_server
+#          uri: file://E:/workspace_sc/config_server #从本地取 添加到git的会强制回退到和git服务器相同的版本(只git add的会被删除); 没添加的不会，并且随意修改也可以生效（比native好用）
+          uri: https://github.com/jianane/config_server
           search-paths: src/main/resources/shared, src/main/resources/share
